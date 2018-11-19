@@ -1406,6 +1406,10 @@
 				top: -5px;
 			}
 
+				ul.contact li:hover a.fa-twitter {
+					background-color: #1da1f2;
+				}
+
 				ul.contact li:hover a.fa-github {
 					background-color: #24292E;
 				}
