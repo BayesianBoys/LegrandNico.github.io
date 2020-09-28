@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications | Nicolas Legrand PhD</title>
+    <link>https://legrandnico.github.io/publication/</link>
+      <atom:link href="https://legrandnico.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
+    <description>Publications</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 01 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://legrandnico.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Publications</title>
+      <link>https://legrandnico.github.io/publication/</link>
+    </image>
+    
+    <item>
+      <title>Long-term modulation of cardiac activity induced by inhibitory control over emotional memories</title>
+      <link>https://legrandnico.github.io/publication/legrand-long-term-2020/</link>
+      <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://legrandnico.github.io/publication/legrand-long-term-2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Emotional Metacognition: Stimulus Valence Modulates Cardiac Arousal and Metamemory</title>
+      <link>https://legrandnico.github.io/publication/legrand-emotional-2020/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://legrandnico.github.io/publication/legrand-emotional-2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Thinking through prior bodies: autonomic uncertainty and interoceptive self-inference</title>
+      <link>https://legrandnico.github.io/publication/allen-thinking-2020/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://legrandnico.github.io/publication/allen-thinking-2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Effects of Sleep and Age on Prospective Memory Consolidation: A Walk in a Virtual Museum</title>
+      <link>https://legrandnico.github.io/publication/rehel-effects-2019/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://legrandnico.github.io/publication/rehel-effects-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Neurosciences et mémoires collectives : les schémas entre cerveau, sociétés et cultures</title>
+      <link>https://legrandnico.github.io/publication/legrand-neurosciences-2015/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>https://legrandnico.github.io/publication/legrand-neurosciences-2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rêves et mémoire : revue de la littérature en neuropsychologie et neurosciences cognitives</title>
+      <link>https://legrandnico.github.io/publication/legrand-reves-2015/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>https://legrandnico.github.io/publication/legrand-reves-2015/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

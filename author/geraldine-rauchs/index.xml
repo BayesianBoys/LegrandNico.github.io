@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Géraldine Rauchs | Nicolas Legrand PhD</title>
+    <link>https://legrandnico.github.io/author/geraldine-rauchs/</link>
+      <atom:link href="https://legrandnico.github.io/author/geraldine-rauchs/index.xml" rel="self" type="application/rss+xml" />
+    <description>Géraldine Rauchs</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://legrandnico.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Géraldine Rauchs</title>
+      <link>https://legrandnico.github.io/author/geraldine-rauchs/</link>
+    </image>
+    
+    <item>
+      <title>Effects of Sleep and Age on Prospective Memory Consolidation: A Walk in a Virtual Museum</title>
+      <link>https://legrandnico.github.io/publication/rehel-effects-2019/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://legrandnico.github.io/publication/rehel-effects-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rêves et mémoire : revue de la littérature en neuropsychologie et neurosciences cognitives</title>
+      <link>https://legrandnico.github.io/publication/legrand-reves-2015/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      <guid>https://legrandnico.github.io/publication/legrand-reves-2015/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
