@@ -243,6 +243,44 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179224478-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-179224478-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -254,8 +292,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu9a3accb34868863209292dc67a47b209_27667_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu9a3accb34868863209292dc67a47b209_27667_192x192_fill_lanczos_center_2.png">
 
   <link rel="canonical" href="https://legrandnico.github.io/publication/">
 
@@ -278,8 +316,8 @@
   <meta property="og:site_name" content="Nicolas Legrand PhD">
   <meta property="og:url" content="https://legrandnico.github.io/publication/">
   <meta property="og:title" content="Publications | Nicolas Legrand PhD">
-  <meta property="og:description" content="Postdoctoral fellow"><meta property="og:image" content="https://legrandnico.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
-  <meta property="twitter:image" content="https://legrandnico.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  <meta property="og:description" content="Postdoctoral fellow"><meta property="og:image" content="https://legrandnico.github.io/images/icon_hu9a3accb34868863209292dc67a47b209_27667_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="https://legrandnico.github.io/images/icon_hu9a3accb34868863209292dc67a47b209_27667_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     <meta property="og:updated_time" content="2020-12-01T00:00:00&#43;00:00">
   

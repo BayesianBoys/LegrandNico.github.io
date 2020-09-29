@@ -243,6 +243,44 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179224478-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-179224478-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -254,8 +292,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu9a3accb34868863209292dc67a47b209_27667_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu9a3accb34868863209292dc67a47b209_27667_192x192_fill_lanczos_center_2.png">
 
   <link rel="canonical" href="https://legrandnico.github.io/author/nicolas-legrand/">
 
@@ -278,10 +316,10 @@
   <meta property="og:site_name" content="Nicolas Legrand PhD">
   <meta property="og:url" content="https://legrandnico.github.io/author/nicolas-legrand/">
   <meta property="og:title" content="Nicolas Legrand | Nicolas Legrand PhD">
-  <meta property="og:description" content="Postdoctoral fellow"><meta property="og:image" content="https://legrandnico.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
-  <meta property="twitter:image" content="https://legrandnico.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  <meta property="og:description" content="Postdoctoral fellow"><meta property="og:image" content="https://legrandnico.github.io/images/icon_hu9a3accb34868863209292dc67a47b209_27667_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="https://legrandnico.github.io/images/icon_hu9a3accb34868863209292dc67a47b209_27667_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
-    
+    <meta property="og:updated_time" content="2020-12-01T00:00:00&#43;00:00">
   
 
   
@@ -547,265 +585,49 @@
 
 
 
+<div class="universal-wrapper pt-3">
+  <h1>Nicolas Legrand</h1>
+</div>
+
 
 <section id="profile-page" class="pt-5">
   <div class="container">
     
     
-      
-      
-      
-      
 
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-<div class="row">
-  <div class="col-12 col-lg-4">
-    <div id="profile">
-
-      
-      
-      <img class="avatar avatar-circle" src="/author/nicolas-legrand/avatar_hudb7806f996aef25e9740d2eac5ba3c90_1593872_270x270_fill_q90_lanczos_center.jpg" alt="Nicolas Legrand">
-      
-
-      <div class="portrait-title">
-        <h2>Nicolas Legrand</h2>
-        <h3>Postdoctoral fellow</h3>
-
-        
-        <h3>
-          <a href="https://www.au.dk/" target="_blank" rel="noopener">
-          <span>Aarhus University</span>
-          </a>
-        </h3>
-        
-      </div>
-
-      <ul class="network-icon" aria-hidden="true">
-        
-        
-        
-        
-        
-        
-        
-        
-          
+    
+    
+    
+    <div class="article-widget content-widget-hr">
+      <h3>Latest</h3>
+      <ul>
         
         <li>
-          <a href="/osf.io/st7bm" >
-            <i class="ai ai-osf big-icon"></i>
-          </a>
+          <a href="/publication/legrand-long-term-2020/">Long-term modulation of cardiac activity induced by inhibitory control over emotional memories</a>
         </li>
         
-        
-        
-        
-          
-        
-        
-        
-        
-        
         <li>
-          <a href="mailto:nicolas.legrand@cfin.au.dk" >
-            <i class="fas fa-envelope big-icon"></i>
-          </a>
+          <a href="/publication/legrand-emotional-2020/">Emotional Metacognition: Stimulus Valence Modulates Cardiac Arousal and Metamemory</a>
         </li>
         
-        
-        
-        
-          
-        
-        
-        
-        
-        
-          
-        
         <li>
-          <a href="https://twitter.com/legrandni" target="_blank" rel="noopener">
-            <i class="fab fa-twitter big-icon"></i>
-          </a>
+          <a href="/publication/allen-thinking-2020/">Thinking through prior bodies: autonomic uncertainty and interoceptive self-inference</a>
         </li>
         
-        
-        
-        
-        
-        
-        
-        
-          
-        
         <li>
-          <a href="https://scholar.google.fr/citations?user=buFy4tAAAAAJ&amp;hl=fr" target="_blank" rel="noopener">
-            <i class="ai ai-google-scholar big-icon"></i>
-          </a>
+          <a href="/publication/rehel-effects-2019/">Effects of Sleep and Age on Prospective Memory Consolidation: A Walk in a Virtual Museum</a>
         </li>
         
-        
-        
-        
-          
-        
-        
-        
-        
-        
-          
-        
         <li>
-          <a href="https://github.com/LegrandNico/" target="_blank" rel="noopener">
-            <i class="fab fa-github big-icon"></i>
-          </a>
+          <a href="/publication/legrand-neurosciences-2015/">Neurosciences et mémoires collectives : les schémas entre cerveau, sociétés et cultures</a>
         </li>
         
-        
-        
-        
-        
-        
-        
-        
-          
-        
         <li>
-          <a href="https://www.researchgate.net/profile/Nicolas_Legrand5/" target="_blank" rel="noopener">
-            <i class="ai ai-researchgate big-icon"></i>
-          </a>
-        </li>
-        
-        
-        
-        
-        
-        
-        
-        
-          
-        
-        <li>
-          <a href="https://publons.com/researcher/3215210/nicolas-legrand/" target="_blank" rel="noopener">
-            <i class="ai ai-publons big-icon"></i>
-          </a>
-        </li>
-        
-        
-        
-        
-        
-        
-        
-        
-          
-        
-        <li>
-          <a href="https://orcid.org/0000-0002-2651-4929" target="_blank" rel="noopener">
-            <i class="ai ai-orcid big-icon"></i>
-          </a>
+          <a href="/publication/legrand-reves-2015/">Rêves et mémoire : revue de la littérature en neuropsychologie et neurosciences cognitives</a>
         </li>
         
       </ul>
-
     </div>
-  </div>
-  <div class="col-12 col-lg-8">
-
-    
-    
-
-    <p>I am a postdoctoral fellow in the 
-<a href="https://the-ecg.org" target="_blank" rel="noopener">Embodied Computation Group</a> under the supervision of Micah Allen. My researches focus on memory, metacognition and brain-body interactions using brain imaging, computational models and physiological signal analysis. I am the creator and maintainer of several open source Python libraries: 
-<a href="https://github.com/embodied-computation-group/systole" target="_blank" rel="noopener">Systole</a> (cardiac and respiratory signal analysis), Cardioception (Measuring interoceptive performance with Psychopy) and 
-<a href="https://github.com/LegrandNico/metadPy" target="_blank" rel="noopener">metadPy</a> (fitting Hierarchical Bayesian models of confidence ratings using PyMC3).</p>
-<h3 id="biography">Biography</h3>
-<p>I completed studies in both Philosophy and Applied Mathematics in Grenoble (UPMF). I obtained a Master’s degree in Cognitive science at the University of Lyon 2 where I specialized in Philosophy of Mind, and a second Master&rsquo;s degree in the University of Caen with a specialization in neuropsychology. I defended in 2018 my PhD on collective memory and memory suppression under the supervision of Francis Eustache and Denis Peschanski (<a href="http://nimh.unicaen.fr/fr/accueil/)">http://nimh.unicaen.fr/fr/accueil/)</a>.</p>
-
-
-    <div class="row">
-
-      
-      <div class="col-md-5">
-        <h3>Interests</h3>
-        <ul class="ul-interests">
-          
-          <li>Memory</li>
-          
-          <li>Metacognition</li>
-          
-          <li>Computational Psychiatry</li>
-          
-          <li>Embodied Cognition</li>
-          
-          <li>Physiological Signal Analysis</li>
-          
-        </ul>
-      </div>
-      
-
-      
-      <div class="col-md-7">
-        <h3>Education</h3>
-        <ul class="ul-edu fa-ul">
-          
-          <li>
-            <i class="fa-li fas fa-graduation-cap"></i>
-            <div class="description">
-              <p class="course">PhD in Psychology, 2018</p>
-              <p class="institution">University of Caen</p>
-            </div>
-          </li>
-          
-          <li>
-            <i class="fa-li fas fa-graduation-cap"></i>
-            <div class="description">
-              <p class="course">MSc in Behavioral Sciences, 2014</p>
-              <p class="institution">University of Caen</p>
-            </div>
-          </li>
-          
-          <li>
-            <i class="fa-li fas fa-graduation-cap"></i>
-            <div class="description">
-              <p class="course">MSc in Cognitive Sciences, 2013</p>
-              <p class="institution">Université Lumière Lyon 2</p>
-            </div>
-          </li>
-          
-          <li>
-            <i class="fa-li fas fa-graduation-cap"></i>
-            <div class="description">
-              <p class="course">BSc in Philosophy, 2011</p>
-              <p class="institution">Grenoble University</p>
-            </div>
-          </li>
-          
-        </ul>
-      </div>
-      
-
-    </div>
-  </div>
-</div>
-
-    
-
-    
-    
     
   </div>
 </section>

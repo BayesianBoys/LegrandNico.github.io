@@ -243,6 +243,44 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179224478-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-179224478-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -252,8 +290,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu9a3accb34868863209292dc67a47b209_27667_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu9a3accb34868863209292dc67a47b209_27667_192x192_fill_lanczos_center_2.png">
 
   <link rel="canonical" href="https://legrandnico.github.io/publication/legrand-long-term-2020/">
 
@@ -276,8 +314,8 @@
   <meta property="og:site_name" content="Nicolas Legrand PhD">
   <meta property="og:url" content="https://legrandnico.github.io/publication/legrand-long-term-2020/">
   <meta property="og:title" content="Long-term modulation of cardiac activity induced by inhibitory control over emotional memories | Nicolas Legrand PhD">
-  <meta property="og:description" content="Abstract Efforts to exclude past experiences from conscious awareness can lead to forgetting. Memory suppression is central to affective disorders, but we still do not really know whether emotions, including their physiological causes, are also impacted by this process in normal functioning individuals. In two studies, we measured the after-effects of suppressing negative memories on cardiac response in healthy participants. Results of Study 1 revealed that efficient control of memories was associated with long-term inhibition of the cardiac deceleration that is normally induced by disgusting stimuli. Attempts to suppress sad memories, by contrast, aggravated the cardiac response, an effect that was closely related to the inability to forget this specific material. In Study 2, electroencephalography revealed a reduction in power in the theta (3–8 Hz), alpha (8–12 Hz) and low-beta (13–20 Hz) bands during the suppression of unwanted memories, compared with their voluntary recall. Interestingly, however, the reduction of power in the theta frequency band during memory control was related to a subsequent inhibition of the cardiac response. These results provide a neurophysiological basis for the influence of memory control mechanisms on the cardiac system, opening up new avenues and questions for treating intrusive memories using motivated forgetting."><meta property="og:image" content="https://legrandnico.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
-  <meta property="twitter:image" content="https://legrandnico.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  <meta property="og:description" content="Abstract Efforts to exclude past experiences from conscious awareness can lead to forgetting. Memory suppression is central to affective disorders, but we still do not really know whether emotions, including their physiological causes, are also impacted by this process in normal functioning individuals. In two studies, we measured the after-effects of suppressing negative memories on cardiac response in healthy participants. Results of Study 1 revealed that efficient control of memories was associated with long-term inhibition of the cardiac deceleration that is normally induced by disgusting stimuli. Attempts to suppress sad memories, by contrast, aggravated the cardiac response, an effect that was closely related to the inability to forget this specific material. In Study 2, electroencephalography revealed a reduction in power in the theta (3–8 Hz), alpha (8–12 Hz) and low-beta (13–20 Hz) bands during the suppression of unwanted memories, compared with their voluntary recall. Interestingly, however, the reduction of power in the theta frequency band during memory control was related to a subsequent inhibition of the cardiac response. These results provide a neurophysiological basis for the influence of memory control mechanisms on the cardiac system, opening up new avenues and questions for treating intrusive memories using motivated forgetting."><meta property="og:image" content="https://legrandnico.github.io/images/icon_hu9a3accb34868863209292dc67a47b209_27667_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="https://legrandnico.github.io/images/icon_hu9a3accb34868863209292dc67a47b209_27667_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2020-09-28T18:27:33&#43;00:00">
@@ -321,7 +359,7 @@
     "name": "Nicolas Legrand PhD",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://legrandnico.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+      "url": "https://legrandnico.github.io/images/icon_hu9a3accb34868863209292dc67a47b209_27667_192x192_fill_lanczos_center_2.png"
     }
   },
   "description": "Abstract Efforts to exclude past experiences from conscious awareness can lead to forgetting. Memory suppression is central to affective disorders, but we still do not really know whether emotions, including their physiological causes, are also impacted by this process in normal functioning individuals. In two studies, we measured the after-effects of suppressing negative memories on cardiac response in healthy participants. Results of Study 1 revealed that efficient control of memories was associated with long-term inhibition of the cardiac deceleration that is normally induced by disgusting stimuli. Attempts to suppress sad memories, by contrast, aggravated the cardiac response, an effect that was closely related to the inability to forget this specific material. In Study 2, electroencephalography revealed a reduction in power in the theta (3–8 Hz), alpha (8–12 Hz) and low-beta (13–20 Hz) bands during the suppression of unwanted memories, compared with their voluntary recall. Interestingly, however, the reduction of power in the theta frequency band during memory control was related to a subsequent inhibition of the cardiac response. These results provide a neurophysiological basis for the influence of memory control mechanisms on the cardiac system, opening up new avenues and questions for treating intrusive memories using motivated forgetting."

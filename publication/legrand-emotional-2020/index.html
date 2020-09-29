@@ -243,6 +243,44 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179224478-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-179224478-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -252,8 +290,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu9a3accb34868863209292dc67a47b209_27667_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu9a3accb34868863209292dc67a47b209_27667_192x192_fill_lanczos_center_2.png">
 
   <link rel="canonical" href="https://legrandnico.github.io/publication/legrand-emotional-2020/">
 
@@ -276,8 +314,8 @@
   <meta property="og:site_name" content="Nicolas Legrand PhD">
   <meta property="og:url" content="https://legrandnico.github.io/publication/legrand-emotional-2020/">
   <meta property="og:title" content="Emotional Metacognition: Stimulus Valence Modulates Cardiac Arousal and Metamemory | Nicolas Legrand PhD">
-  <meta property="og:description" content="Abstract Emotion alters how we feel, see, and experience the world. In the domain of memory, the emotional valence and arousal of memorized stimuli can modulate both the acuity and content of episodic recall. However, no experiment has investigated whether arousal and valence also influence metacognition for memory (i.e., the process of self-monitoring memories). In a pre-registered study, we applied a novel psychophysiological design together with computational models of metacognition to assess the influence of stimulus valence and arousal on the sensitivity, bias, and efficiency of metamemory. To estimate the role of physiological arousal in mediating these effects, we recorded cardiac measures through pulse oximetry. We found that negative valence globally and substantially decreased both memory performance and subjective confidence, in particular for low-arousal words. Simultaneously, we found that emotional valence modulated both heart rate and heart-rate variability (HRV), indicating a robust effect of negative valence on physiological arousal during recognition memory. Exploratory trial-level analyses further revealed that subjective confidence was encoded in instantaneous heart-rate fluctuations, and that this relationship was modulated by emotional valence. Our results demonstrate that both recognition memory and metacognition are influenced by the emotional contents of encoded items and that this correlation is in part related to cardiac activity."><meta property="og:image" content="https://legrandnico.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
-  <meta property="twitter:image" content="https://legrandnico.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  <meta property="og:description" content="Abstract Emotion alters how we feel, see, and experience the world. In the domain of memory, the emotional valence and arousal of memorized stimuli can modulate both the acuity and content of episodic recall. However, no experiment has investigated whether arousal and valence also influence metacognition for memory (i.e., the process of self-monitoring memories). In a pre-registered study, we applied a novel psychophysiological design together with computational models of metacognition to assess the influence of stimulus valence and arousal on the sensitivity, bias, and efficiency of metamemory. To estimate the role of physiological arousal in mediating these effects, we recorded cardiac measures through pulse oximetry. We found that negative valence globally and substantially decreased both memory performance and subjective confidence, in particular for low-arousal words. Simultaneously, we found that emotional valence modulated both heart rate and heart-rate variability (HRV), indicating a robust effect of negative valence on physiological arousal during recognition memory. Exploratory trial-level analyses further revealed that subjective confidence was encoded in instantaneous heart-rate fluctuations, and that this relationship was modulated by emotional valence. Our results demonstrate that both recognition memory and metacognition are influenced by the emotional contents of encoded items and that this correlation is in part related to cardiac activity."><meta property="og:image" content="https://legrandnico.github.io/images/icon_hu9a3accb34868863209292dc67a47b209_27667_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="https://legrandnico.github.io/images/icon_hu9a3accb34868863209292dc67a47b209_27667_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2020-09-28T18:27:49&#43;00:00">
@@ -321,7 +359,7 @@
     "name": "Nicolas Legrand PhD",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://legrandnico.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+      "url": "https://legrandnico.github.io/images/icon_hu9a3accb34868863209292dc67a47b209_27667_192x192_fill_lanczos_center_2.png"
     }
   },
   "description": "Abstract Emotion alters how we feel, see, and experience the world. In the domain of memory, the emotional valence and arousal of memorized stimuli can modulate both the acuity and content of episodic recall. However, no experiment has investigated whether arousal and valence also influence metacognition for memory (i.e., the process of self-monitoring memories). In a pre-registered study, we applied a novel psychophysiological design together with computational models of metacognition to assess the influence of stimulus valence and arousal on the sensitivity, bias, and efficiency of metamemory. To estimate the role of physiological arousal in mediating these effects, we recorded cardiac measures through pulse oximetry. We found that negative valence globally and substantially decreased both memory performance and subjective confidence, in particular for low-arousal words. Simultaneously, we found that emotional valence modulated both heart rate and heart-rate variability (HRV), indicating a robust effect of negative valence on physiological arousal during recognition memory. Exploratory trial-level analyses further revealed that subjective confidence was encoded in instantaneous heart-rate fluctuations, and that this relationship was modulated by emotional valence. Our results demonstrate that both recognition memory and metacognition are influenced by the emotional contents of encoded items and that this correlation is in part related to cardiac activity."

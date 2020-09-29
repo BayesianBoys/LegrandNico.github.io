@@ -243,6 +243,44 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179224478-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-179224478-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -256,8 +294,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu9a3accb34868863209292dc67a47b209_27667_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu9a3accb34868863209292dc67a47b209_27667_192x192_fill_lanczos_center_2.png">
 
   <link rel="canonical" href="https://legrandnico.github.io/">
 
@@ -280,8 +318,8 @@
   <meta property="og:site_name" content="Nicolas Legrand PhD">
   <meta property="og:url" content="https://legrandnico.github.io/">
   <meta property="og:title" content="Nicolas Legrand PhD">
-  <meta property="og:description" content="Postdoctoral fellow"><meta property="og:image" content="https://legrandnico.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
-  <meta property="twitter:image" content="https://legrandnico.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  <meta property="og:description" content="Postdoctoral fellow"><meta property="og:image" content="https://legrandnico.github.io/images/icon_hu9a3accb34868863209292dc67a47b209_27667_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="https://legrandnico.github.io/images/icon_hu9a3accb34868863209292dc67a47b209_27667_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     <meta property="og:updated_time" content="2020-12-01T00:00:00&#43;00:00">
   
@@ -800,11 +838,10 @@
     <h1>About me</h1>
 
     <p>I am a postdoctoral fellow in the 
-<a href="https://the-ecg.org" target="_blank" rel="noopener">Embodied Computation Group</a> under the supervision of Micah Allen. My researches focus on memory, metacognition and brain-body interactions using brain imaging, computational models and physiological signal analysis. I am the creator and maintainer of several open source Python libraries: 
+<a href="https://the-ecg.org" target="_blank" rel="noopener">Embodied Computation Group</a> under the supervision of Micah Allen. My researches focus on memory, metacognition and brain-body interactions using brain imaging, computational models and physiological signal analysis.</p>
+<p>I am the creator of several open source Python libraries: 
 <a href="https://github.com/embodied-computation-group/systole" target="_blank" rel="noopener">Systole</a> (cardiac and respiratory signal analysis), Cardioception (Measuring interoceptive performance with Psychopy) and 
 <a href="https://github.com/LegrandNico/metadPy" target="_blank" rel="noopener">metadPy</a> (fitting Hierarchical Bayesian models of confidence ratings using PyMC3).</p>
-<h3 id="biography">Biography</h3>
-<p>I completed studies in both Philosophy and Applied Mathematics in Grenoble (UPMF). I obtained a Master’s degree in Cognitive science at the University of Lyon 2 where I specialized in Philosophy of Mind, and a second Master&rsquo;s degree in the University of Caen with a specialization in neuropsychology. I defended in 2018 my PhD on collective memory and memory suppression under the supervision of Francis Eustache and Denis Peschanski (<a href="http://nimh.unicaen.fr/fr/accueil/)">http://nimh.unicaen.fr/fr/accueil/)</a>.</p>
 
 
     <div class="row">
