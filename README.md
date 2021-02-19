@@ -4,7 +4,7 @@
 
 This repository contains material for the advanced cognitive modeling course (Aarhus University). All Monday will be allocated to lectures, the practice and applications will be on Fridays. We will use Python, [PyMC3](https://docs.pymc.io/) for Bayesian modelling, [Tensorflow](https://www.tensorflow.org/) and [OpenGym](https://gym.openai.com/) for deep/reinforcement learning).
 
-**Prerequisites:** This course will be run using Python. If you have never programmed in Python, or if you have limited experience with it, you might consider to prepare using the following tutorials:
+**Prerequisites:** This course will be run using Python. Being familiar with variables, lists, dicts, the numpy and scipy libraries as well as plotting in matplotlib is required. If you have never programmed in Python, or if you have limited experience, you might consider preparing with the following tutorials:
 * [Software carpentry 1-day Python tutorial](https://swcarpentry.github.io/python-novice-inflammation/)
 * [Scipy Lecture Notes](https://scipy-lectures.org/)
 * [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
@@ -38,7 +38,9 @@ The portfolio will consist of 3 Jupyter notebook exercises (Bayesian modeling on
 
 | Monday | 14:00 – 16:00 | The process of modeling
 | --- | ---| --- |
-| Friday | 12:00 – 14:00 | Programming Probabilistically – Bayes' rule, distributions
+| Friday | 12:00 – 14:00 | Programming Probabilistically – Bayes' rule, distributions 
+
+**Exercises:** [Notebook](https://github.com/LegrandNico/CognitiveModeling/blob/master/notebooks/1-ThinkingProbabilistically.ipynb) - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LegrandNico/CognitiveModeling/blob/master/notebooks/1-ThinkingProbabilistically.ipynb) - [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/LegrandNico/CognitiveModeling/raw/master/notebooks/1-ThinkingProbabilistically.ipynb)
 
 >Bodner, K., Brimacombe, C., Chenery, E. S., Greiner, A., McLeod, A. M., Penk, S. R., & Vargas Soto, J. S. (2021). Ten simple rules for tackling your first mathematical models: A guide for graduate students by graduate students. PLOS Computational Biology, 17(1), e1008539. https://doi.org/10.1371/journal.pcbi.1008539
 
@@ -52,11 +54,21 @@ The portfolio will consist of 3 Jupyter notebook exercises (Bayesian modeling on
 
 ### Week 7
 
-| Monday | 14:00 – 16:00 | Introduction to PyMC3 – MCMC – Parameter estimation - Linear regression |
+| Monday | 14:00 – 16:00 | Introduction to PyMC3 – MCMC – Parameter estimation |
 | --- | ---| --- |
-| Friday | 12:00 – 14:00 | Bayesian t-test – Cheating among students model |
+| Friday | 12:00 – 14:00 | Normal distributions - Linear regression |
+
+This week we will focus on Chapters 1 and 2 from the book (Bayesian analysis with Python).
+
+**Introduction to PyMC3:** [Notebook](https://github.com/LegrandNico/CognitiveModeling/blob/master/notebooks/IntroductionPyMC3.ipynb) - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LegrandNico/CognitiveModeling/blob/master/notebooks/IntroductionPyMC3.ipynb) - [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/LegrandNico/CognitiveModeling/raw/master/notebooks/IntroductionPyMC3.ipynb)
+
+**Exercises + Solutions - 1:** [Notebook](https://github.com/LegrandNico/CognitiveModeling/blob/master/notebooks/1-Solutions.ipynb) - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LegrandNico/CognitiveModeling/blob/master/notebooks/1-Solutions.ipynb) - [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/LegrandNico/CognitiveModeling/raw/master/notebooks/1-Solutions.ipynb)
+
+**Exercises - 2:** [Notebook](https://github.com/LegrandNico/CognitiveModeling/blob/master/notebooks/2-Exercises.ipynb) - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LegrandNico/CognitiveModeling/blob/master/notebooks/2-Exercises.ipynb) - [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/LegrandNico/CognitiveModeling/raw/master/notebooks/2-Exercises.ipynb)
 
 > Martin, O. (2018). Bayesian analysis with Python : introduction to statistical modeling and probabilistic programming using PyMC3 and ArviZ. Birmingham, UK: Packt Publishing. *Chapter 1 and 2*.
+
+#### Additional references and videos
 
 > Kruschke, J. (2015). Doing Bayesian data analysis : a tutorial with R, JAGS, and Stan. Boston: Academic Press. *Chapter 6 and 7*.
 
@@ -68,11 +80,13 @@ The portfolio will consist of 3 Jupyter notebook exercises (Bayesian modeling on
 ---
 
 ### Week 8
-| Monday | 14:00 – 16:00 | Hierarchical Bayesian modeling - I |
+| Monday | 14:00 – 16:00 | – Outliers - Cheating among students model |
 | --- | ---| --- |
-| Friday | 12:00 – 14:00 | Hierarchical Bayesian modeling - I |
+| Friday | 12:00 – 14:00 | Hierarchical Bayesian modeling |
 
 > Martin, O. (2018). Bayesian analysis with Python : introduction to statistical modeling and probabilistic programming using PyMC3 and ArviZ. Birmingham, UK: Packt Publishing. *Chapter 3*.
+
+#### Additional references and videos
 
 > Kruschke, J. (2015). Doing Bayesian data analysis : a tutorial with R, JAGS, and Stan. Boston: Academic Press. *Chapter 9*.
 > 
@@ -109,6 +123,8 @@ The portfolio will consist of 3 Jupyter notebook exercises (Bayesian modeling on
 | --- | ---| --- |
 | Friday | 12:00 – 14:00 | Rescorla-Wagner model |
 
+* Reinforcement Learning: Machine Learning Meets Control Theory - [Video](https://www.youtube.com/watch?v=0MNVhXEX9to)
+
 ---
 
 >Wilson, R. C., & Collins, A. G. (2019). Ten simple rules for the computational modeling of behavioral data. ELife, 8. https://doi.org/10.7554/elife.49547
@@ -117,6 +133,7 @@ The portfolio will consist of 3 Jupyter notebook exercises (Bayesian modeling on
 | Monday | 14:00 – 16:00 | Reinforcement learning |
 | --- | ---| --- |
 | Friday | 12:00 – 14:00 | Introduction to Tensorflow - Multiarmed bandit |
+
 
 ---
 
