@@ -14,12 +14,24 @@ The portfolio will consist of 3 Jupyter notebook exercises (Bayesian modeling on
 ## Slides
 * [Introduction](https://github.com/LegrandNico/CognitiveModeling/raw/master/Slides/Advanced%20cognitive%20modeling%20%E2%80%93%20%201.1%20Introduction.pdf)
 * [Bayesian Modeling](https://github.com/LegrandNico/CognitiveModeling/raw/master/Slides/Advanced%20cognitive%20modeling%20%E2%80%93%20%202.Bayesian%20modeling.pdf)
+
+## Notebooks
+
+| Notebook | Colab | nbViewer | 
+| --- | ---| --- |
+| Coin-flipping problem - Bayes' rule | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LegrandNico/CognitiveModeling/blob/master/notebooks/0-BayesRule.ipynb) |  [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/LegrandNico/CognitiveModeling/raw/master/notebooks/0-BayesRule.ipynb)
+| Thinking probabilistically | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LegrandNico/CognitiveModeling/blob/master/notebooks/1-ThinkingProbabilistically.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/LegrandNico/CognitiveModeling/raw/master/notebooks/1-ThinkingProbabilistically.ipynb) 
+| Introduction to PyMC3 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LegrandNico/CognitiveModeling/blob/master/notebooks/2-IntroductionPyMC3.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/LegrandNico/CognitiveModeling/raw/master/notebooks/2-IntroductionPyMC3.ipynb)
+| Normal distribution- Linear Regression | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LegrandNico/CognitiveModeling/blob/master/notebooks/2-LinearRegression.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/LegrandNico/CognitiveModeling/raw/master/notebooks/2-LinearRegression.ipynb)
+| 7 scientists problem - Measurement of IQ | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LegrandNico/CognitiveModeling/blob/master/notebooks/3-sevenScientistsIQ.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/LegrandNico/CognitiveModeling/raw/master/notebooks/3-sevenScientistsIQ.ipynb)
+| Psychophysics | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LegrandNico/CognitiveModeling/blob/master/notebooks/4-Psychophysics.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/LegrandNico/CognitiveModeling/raw/master/notebooks/4-Psychophysics.ipynb)
+
 ## Schedule
 
 ### Week 5
 
 | Friday | 12:00 – 14:00 | Presentation – Introduction to cognitive and computational modelling | 
-| --- | ---| --- | --- |
+| --- | ---| --- |
 
 * Neuromatch Academy (W1D1 - Intro) - [Video](https://www.youtube.com/watch?v=KxldhMR5PxA) - [Slides](https://osf.io/rbx2a/?direct%26mode=render%26action=download%26mode=render)
 * Neuromatch Academy (W1D1 - Outro) - [Video](https://www.youtube.com/watch?v=KZQXfQL1SH4) - [Slides](https://osf.io/9hkg2/?direct%26mode=render%26action=download%26mode=render)
@@ -43,8 +55,6 @@ The portfolio will consist of 3 Jupyter notebook exercises (Bayesian modeling on
 | --- | ---| --- |
 | Friday | 12:00 – 14:00 | Programming Probabilistically – Bayes' rule, distributions 
 
-**Exercises:** [Notebook](https://github.com/LegrandNico/CognitiveModeling/blob/master/notebooks/1-ThinkingProbabilistically.ipynb) - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LegrandNico/CognitiveModeling/blob/master/notebooks/1-ThinkingProbabilistically.ipynb) - [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/LegrandNico/CognitiveModeling/raw/master/notebooks/1-ThinkingProbabilistically.ipynb)
-
 >Bodner, K., Brimacombe, C., Chenery, E. S., Greiner, A., McLeod, A. M., Penk, S. R., & Vargas Soto, J. S. (2021). Ten simple rules for tackling your first mathematical models: A guide for graduate students by graduate students. PLOS Computational Biology, 17(1), e1008539. https://doi.org/10.1371/journal.pcbi.1008539
 
 >Blohm, G., Kording, K. P., & Schrater, P. R. (2020). A How-to-Model Guide for Neuroscience. Eneuro, 7(1), ENEURO.0352-19.2019. https://doi.org/10.1523/eneuro.0352-19.2019
@@ -63,12 +73,6 @@ The portfolio will consist of 3 Jupyter notebook exercises (Bayesian modeling on
 
 This week we will focus on Chapters 1 and 2 from the book (Bayesian analysis with Python).
 
-**Introduction to PyMC3:** [Notebook](https://github.com/LegrandNico/CognitiveModeling/blob/master/notebooks/IntroductionPyMC3.ipynb) - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LegrandNico/CognitiveModeling/blob/master/notebooks/IntroductionPyMC3.ipynb) - [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/LegrandNico/CognitiveModeling/raw/master/notebooks/IntroductionPyMC3.ipynb)
-
-**Exercises + Solutions - 1:** [Notebook](https://github.com/LegrandNico/CognitiveModeling/blob/master/notebooks/1-Solutions.ipynb) - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LegrandNico/CognitiveModeling/blob/master/notebooks/1-Solutions.ipynb) - [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/LegrandNico/CognitiveModeling/raw/master/notebooks/1-Solutions.ipynb)
-
-**Exercises - 2:** [Notebook](https://github.com/LegrandNico/CognitiveModeling/blob/master/notebooks/2-Exercises.ipynb) - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LegrandNico/CognitiveModeling/blob/master/notebooks/2-Exercises.ipynb) - [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/LegrandNico/CognitiveModeling/raw/master/notebooks/2-Exercises.ipynb)
-
 > Martin, O. (2018). Bayesian analysis with Python : introduction to statistical modeling and probabilistic programming using PyMC3 and ArviZ. Birmingham, UK: Packt Publishing. *Chapter 1 and 2*.
 
 #### Additional references and videos
@@ -83,14 +87,11 @@ This week we will focus on Chapters 1 and 2 from the book (Bayesian analysis wit
 ---
 
 ### Week 8
-| Monday | 14:00 – 16:00 | – 7 scientist - Measurement of IQ |
+| Monday | 14:00 – 16:00 | – 7 scientists - Measurement of IQ |
 | --- | ---| --- |
-| Friday | 12:00 – 14:00 | Hierarchical Bayesian modeling |
+| Friday | 12:00 – 14:00 | Psychophysics |
 
 > Martin, O. (2018). Bayesian analysis with Python : introduction to statistical modeling and probabilistic programming using PyMC3 and ArviZ. Birmingham, UK: Packt Publishing. *Chapter 3*.
-
-
-**Exercises - 3:** [Notebook](https://github.com/LegrandNico/CognitiveModeling/blob/master/notebooks/3-Exercises.ipynb) - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LegrandNico/CognitiveModeling/blob/master/notebooks/3-Exercises.ipynb) - [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/LegrandNico/CognitiveModeling/raw/master/notebooks/3-Exercises.ipynb)
 
 #### Additional references and videos
 
@@ -101,7 +102,7 @@ This week we will focus on Chapters 1 and 2 from the book (Bayesian analysis wit
 ---
 
 ### Week 9
-| Monday | 14:00 – 16:00 | Hierarchical Bayesian modelling - II |
+| Monday | 14:00 – 16:00 | Hierarchical Bayesian modelling |
 | --- | ---| --- |
 | Friday | 12:00 – 14:00 | 8 schools problem |
 
