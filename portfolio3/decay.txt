@@ -1,0 +1,33 @@
+model {
+  
+  beta0_c0 ~ dnorm(0,1)T(0,) 
+  betaGini_c0 ~ dnorm(0,1)
+
+  beta0_gamma ~ dnorm(0,1)T(0,) 
+  betaGini_gamma ~ dnorm(0,1)
+
+  for (g in 1:ngroups) {
+  
+    for (s in 1:groupSize) {
+
+      sigma_c[s,g] ~ dgamma(1,1)
+
+      ################### Linear model for initial contrib  ###################
+      c0[s,g] <- beta0_c0 + (betaGini_c0*Gini[g])
+
+      ################### Linear model for decay  ###########################
+      gamma[s,g] <- beta0_gamma + (betaGini_gamma*Gini[g])
+
+      ##################  Individual Decay model  ############################
+      for (t in 1:ntrials) {
+  
+        mu_c[s,t,g] <- c0[s,g]*exp(-gamma[s,g]*t)
+        c[s,t,g,1] ~ dnorm(mu_c[s,t,g],sigma_c[s,g])
+
+        
+      }
+    }
+    
+  }  
+    
+}

@@ -1,0 +1,163 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+## same as yours
+
+```{r setup, include=FALSE}
+
+set.seed(1982)
+pacman::p_load(R2jags, polspline, tidyverse)
+
+```
+
+## same as yours 
+
+```{r}
+
+groupSize <- 4
+ntrials <- 10
+pi <- 1.4
+ntokens <- 20
+vals <- seq(1,21,1) #possible values to contribute - from 0 to 20 tokens
+
+```
+
+## same as yours
+
+```{r}
+
+d <- read.csv("HerrmannThoeniGaechterDATA.csv", skip = 3) # Public goods game
+
+```
+
+## does the same as yours
+
+```{r}
+
+# create variable for GINI. Data from 
+# http://hdr.undp.org/sites/default/files/reports/269/hdr_2009_en_complete.pdf,
+
+d <- d %>% 
+  mutate(gini = case_when(
+    city == "Melbourne" ~ 34.3,
+    city == "Minsk" ~ 25.3,
+    city == "Chengdu" ~ 38.5,
+    city == "Copenhagen" ~ 28.7,
+    city == "Bonn" ~ 31.9,
+    city == "Athens" ~ 34.4,
+    city == "Seoul" ~ 31.6,
+    city == "Samara" ~ 37.5,
+    city == "Zurich" ~ 32.7,
+    city == "St. Gallen" ~ 32.7,
+    city == "Istanbul" ~ 41.9,
+    city == "Nottingham" ~ 34.8,
+    city == "Dnipropetrovs'k" ~ 26.1,
+    city == "Boston" ~ 41.1
+  ))
+
+
+```
+
+## same as yours
+
+```{r}
+
+# extract every third line - data file has lines representing others responses and we don't need that
+d1 <- d[seq(1,length(d$sessionid),3),]
+
+group_names <- unique(d1$groupid)
+ngroups <- length(group_names)
+
+# THIS WILL REMOVE SUBJECTS WITH MISSING DATA IN NO PUNISHMENT CONDITION
+ngroups <- 269
+
+subject_names <- unique(d1$subjectid)
+nsubjects <- length(subject_names)
+
+```
+
+## Same as yours
+
+```{r}
+# data for no punishment condition #
+c_no_punish <- array(0,c(groupSize,ntrials,ngroups))
+Ga_no_punish <- array(0,c(ntrials,ngroups))
+Gc_no_punish <- array(0,c(groupSize,ntrials,ngroups))
+missing <- array(0,ngroups)
+
+```
+
+## Same as yours
+
+```{r}
+
+# your loop (Gc_no_punish)
+for (g in 1:ngroups) {
+  c_no_punish[,,g] <- rbind(d1$senderscontribution[d1$groupid==group_names[g]&d1$p=="N-experiment"][1:10],
+                            d1$senderscontribution[d1$groupid==group_names[g]&d1$p=="N-experiment"][11:20],
+                            d1$senderscontribution[d1$groupid==group_names[g]&d1$p=="N-experiment"][21:30],
+                            d1$senderscontribution[d1$groupid==group_names[g]&d1$p=="N-experiment"][31:40])
+  
+  Ga_no_punish[,g] <- colMeans(c_no_punish[,,g])
+  
+  missing[g] <- is.na(c_no_punish[1,1,g])
+  
+  for (s in 1:groupSize) {
+    Gc_no_punish[,,g] <- colSums(c_no_punish[-s,,g])
+  }
+}
+
+
+```
+
+## The point. 
+Here we come to it. 
+So, we could not make sense of the output of Gc_no_punish.
+This code showcases our confusion.
+We have omitted the for-loop over groupSize,
+and just hard-coded it to the last group, which is 4
+(i.e. we are not looping over groupSize with "s"). 
+This gives the same result as your code - i.e.
+all.equals(Gc_no_punish, Gc_four) is TRUE. 
+How does this make sense?
+I.e. your for-loop does not update the value in 
+Gc_no_punish, but just overwrites it. 
+This surely cannot be the intended functionality?
+
+Furthermore, we cannot tell when you actually use 
+Gc_no_punish (or Gc_punish) in the models? 
+I.e. it seems that you just create them and then
+don't use them..? We checked in the model specifications
+(the .txt files) and no "Gc" is used there either. 
+
+```{r}
+
+# array with same dimensions as Gc_no_punish
+Gc_four <- array(0, c(groupSize, ntrials, ngroups))
+
+# hard-coding s to 4. 
+# shows that your for-loop just overwrites. 
+# does not make a lot of sense. 
+for (g in 1:ngroups) {
+  c_no_punish[,,g] <- rbind(d1$senderscontribution[d1$groupid==group_names[g]&d1$p=="N-experiment"][1:10],
+                            d1$senderscontribution[d1$groupid==group_names[g]&d1$p=="N-experiment"][11:20],
+                            d1$senderscontribution[d1$groupid==group_names[g]&d1$p=="N-experiment"][21:30],
+                            d1$senderscontribution[d1$groupid==group_names[g]&d1$p=="N-experiment"][31:40])
+  
+  Ga_no_punish[,g] <- colMeans(c_no_punish[,,g])
+  
+  missing[g] <- is.na(c_no_punish[1,1,g])
+  
+  # we changed stuff here. 
+  # no for-loop, just the last groupsize. 
+  Gc_four[,,g] <- colSums(c_no_punish[-4,,g])
+
+}
+
+# are they the same?: yes. 
+# is this really the intended functionality? 
+all.equal(Gc_no_punish, Gc_four)
+ 
+```

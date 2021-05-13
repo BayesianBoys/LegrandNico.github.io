@@ -1,0 +1,82 @@
+model {
+
+  #data is nagents, ntrials, index of vals, matrix of contributions (c), and average contribution (Ga)
+  
+  beta0_pbeta ~ dnorm(0,1) 
+  betaGini_pbeta ~ dnorm(0,1)
+  
+  #######################################################################################################
+  
+  for (g in 1:ngroups) {
+  
+    for (s in 1:groupSize) {
+    
+      #--------------------------------------------------------------------------------------------------
+      #------------------------- Individual regression priors -------------------------------------------
+      #--------------------------------------------------------------------------------------------------
+      
+      mu_pbeta_probit[s,g] <- beta0_pbeta + (betaGini_pbeta*(Gini[g]))
+      
+      sigma_pbeta[s,g] ~ dunif(1,100) #concentration parameter for reparameterised beta distribution
+      
+      # reparameterising beta prior for slope of beliefs/preferences  in CC model 
+      probit(mu_pbeta[s,g]) <- mu_pbeta_probit[s,g] # probit descale - - mean for cond is lower than overall
+      shape1_pbeta[s,g] <- (mu_pbeta[s,g]) * sigma_pbeta[s,g]
+      shape2_pbeta[s,g] <- (1 - mu_pbeta[s,g]) * sigma_pbeta[s,g]  
+
+      #---------------------------------------------------------------------------------------------------
+      #------------------------- Model level priors ------------------------------------------------------
+      #---------------------------------------------------------------------------------------------------
+      #initial weighting of beliefs about others contributions in choice of own contribution, relative to prefs
+      omega1[s,g] ~ dbeta(1,1) 
+        
+      #decay rate in weighting of beliefs about others - prefs dominate over time
+      lambda[s,g] ~ dbeta(1,1)
+        
+      #parameter weighting of beliefs about what others will contribute, relative to observed contribution
+      gamma[s,g] ~ dbeta(1,1)
+        
+      #~ dunif(0,20) #intercept of linear model relating preferred contributions to possible contribution values
+      p0[s,g] <- 0
+
+      #slope of linear model relating preferred contributions to possible contribution values
+      pbeta[s,g] ~ dbeta(shape1_pbeta[s,g]+1,shape2_pbeta[s,g]+1)
+        
+      for (i in 1:length(vals)) {
+        #vector of preferred contributions for each possible value - linear relationship
+        pvals[s,i,g] <- p0[s,g] + (pbeta[s,g]*vals[i]) 
+      }
+        
+      omega[s,1,g] <- omega1[s,g]
+        
+      #assume beliefs about others on first trial is reflected in first contribution. Simplification for model.
+      Gb[s,1,g] <- c[s,1,g,1] 
+        
+      mu_c[s,1,g] <- Ga[1,g,1]
+    }
+
+
+    for (t in 2:ntrials) {
+        
+      for (s in 1:groupSize) {
+        
+        Gb[s,t,g] <- (gamma[s,g]*(Gb[s,t-1,g]))+((1-gamma[s,g])*(Ga[t-1,g,1]))
+          
+        #this line is necessary to avoid zero indexing
+        pval_index[s,t,g] <- ifelse(round(Gb[s,t,g])>1,round(Gb[s,t,g]),1)
+          
+        p[s,t,g] <- pvals[s,pval_index[s,t,g],g]
+          
+        omega[s,t,g] <- omega[s,t-1,g]*(1-lambda[s,g])
+          
+        # departs from simulation function. Data needs to be stochastic,
+        # so we don't simulate c directly, rather mean of c distribution
+        mu_c[s,t,g] <- ((omega[s,t,g])*Gb[s,t,g]) + ((1-omega[s,t,g])*p[s,t,g]) 
+          
+        c[s,t,g,1] ~ dnorm(mu_c[s,t,g],.1)
+      }
+        
+    }
+  }
+  
+}
