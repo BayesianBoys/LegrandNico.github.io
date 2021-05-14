@@ -1,0 +1,37 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r}
+pacman::p_load(tidyverse)
+```
+
+```{r}
+
+vector1 <- c(1, 2)
+vector2 <- c(1, 2, 3, 4, 5, 6)
+
+c0 <- array(c(vector1),dim = c(2,3))
+gamma <- array(c(vector2),dim = c(2,3))
+ntrials <- c(1, 2, 3, 4)
+
+mu_c <- array(0, c(2, 4, 3))
+```
+
+```{r}
+
+for (g in 1:3) {
+  for (s in 1:2){
+    for (t in 1:length(ntrials)) {
+  mu_c[s,t,g] <- c0[s,g]*exp(-gamma[s,g]*t)
+  }
+  }
+}
+
+```
+
+```{r}
+mu_c
+```
+
