@@ -17,7 +17,7 @@ ntrials <- 10
 pi <- 1.4
 ntokens <- 20
 vals <- seq(1,21,1) #possible values to contribute - from 0 to 20 tokens
-
+vals
 ```
 
 ```{r}
@@ -307,6 +307,12 @@ model {
   }  
     
 }
+
+```{r}
+for (t in 2:10){
+  print(t)
+}
+```
 
 
 ### CC 
